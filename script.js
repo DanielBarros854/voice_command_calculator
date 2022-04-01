@@ -21,22 +21,20 @@ const formatarCalculo = (calculo) => {
 }
 
 const calcular = (calculo, operacao) => {
-  const calculo_formatado = calculo.split(operacao)
-  const num1 = Number(calculo_formatado[0]);
-  const num2 = Number(calculo_formatado[1]);
+  const [num1, num2] = calculo.split(operacao);
 
   switch (operacao) {
     case '+':
-      return num1 + num2;
+      return Number(num1) + Number(num2);
 
     case '-':
-      return num1 - num2;
+      return Number(num1) - Number(num2);
 
     case 'x':
-      return num1 * num2;
+      return Number(num1) * Number(num2);
 
     case '/':
-      return num1 / num2;
+      return Number(num1) / Number(num2);
   }
 }
 
